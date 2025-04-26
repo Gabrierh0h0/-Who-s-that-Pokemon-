@@ -10,6 +10,7 @@ const PokemonDisplay: React.FC<PokemonDisplayProps> = ({ sprite, gameOver }) => 
     <div className="mb-12 relative w-80 h-44 mx-auto">
       <img
         onContextMenu={(e) => e.preventDefault()} 
+        style={{ userSelect: 'none', pointerEvents: 'none' }}
         draggable="false"
         src={sprite}
         alt="Silueta de Pokémon"
