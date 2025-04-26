@@ -20,6 +20,7 @@ const PokemonDisplay: React.FC<PokemonDisplayProps> = ({ sprite, gameOver }) => 
           backgroundRepeat: 'no-repeat',
           userSelect: 'none', // Evita selección
         }}
+        draggable= "false"
       />
     </div>
   );
