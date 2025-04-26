@@ -7,19 +7,22 @@ interface PokemonDisplayProps {
 
 const PokemonDisplay: React.FC<PokemonDisplayProps> = ({ sprite, gameOver }) => {
   return (
-    <div className="mb-12 relative w-80 h-44 mx-auto">
-      <img
-        onContextMenu={(e) => e.preventDefault()} 
-        style={{ userSelect: 'none', pointerEvents: 'none' }}
-        draggable="false"
-        src={sprite}
-        alt="Silueta de Pokémon"
-        className={`w-60 h-60 mx-auto transition-all duration-500 ${
+    <div className="mb-6 relative w-40 h-40 mx-auto">
+      <div className="absolute inset-0 rounded-full bg-gradient-to-b from-gray-900 to-black shadow-inner opacity-80"></div>
+      <div
+        className={`w-40 h-40 mx-auto transition-all duration-500 ${
           gameOver ? 'filter brightness-100 scale-110' : 'filter brightness-0 scale-100'
         }`}
+        style={{
+          backgroundImage: `url(${sprite})`,
+          backgroundSize: 'contain',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          userSelect: 'none', // Evita selección
+        }}
       />
     </div>
   );
-};
 
+};
 export default PokemonDisplay;
