@@ -1,0 +1,32 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Estilo del fondo temático */
+.bg-pokemon-bg {
+  background-image: url("https://i.imgflip.com/5bancw.png"); /* Fondo temático de Pokémon */
+  background-size: cover;
+  background-position: center;
+}
+
+/* Colores personalizados inspirados en Pokémon */
+:root {
+  --pokemon-blue: #3558A8;
+  --pokemon-blue-dark: #2A4478;
+  --pokemon-yellow: #FFCB05; /* Amarillo clásico de Pokémon */
+  --pokemon-yellow-dark: #E6B800; /* Amarillo más oscuro para hover */
+}
+
+/* Aplicar la fuente pixelada */
+.press-start-2p-regular {
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.bg-pokemon-yellow {
+  background-color: var(--pokemon-yellow);
+}
+
