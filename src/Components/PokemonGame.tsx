@@ -59,6 +59,12 @@ const PokemonGame: React.FC = () => {
   }, []);
 
   useEffect(() => {
+
+    if (audio) {
+      audio.pause();
+      audio.currentTime = 0; // Reinicia el audio al principio
+    }
+    
     if (gameOver && correctPokemon) {
       const cry = new Audio(`https://play.pokemonshowdown.com/audio/cries/${correctPokemon.name}.ogg`);
       cry.play().catch(() => console.log("Sonido no disponible para este Pokémon"));
