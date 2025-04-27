@@ -64,7 +64,7 @@ const PokemonGame: React.FC = () => {
       audio.pause();
       audio.currentTime = 0; // Reinicia el audio al principio
     }
-    
+
     if (gameOver && correctPokemon) {
       const cry = new Audio(`https://play.pokemonshowdown.com/audio/cries/${correctPokemon.name}.ogg`);
       cry.play().catch(() => console.log("Sonido no disponible para este Pokémon"));
@@ -132,7 +132,7 @@ const PokemonGame: React.FC = () => {
                 </div>
                 <button
                   onClick={handleNext}
-                  className="bg-gray-600 hover:bg-cyan-700 text-white press-start-2p-regular py-2 px-4 rounded-lg shadow-md border-2 border-white transition-all duration-200 transform hover:scale-105"
+                  className="bg-gray-600 hover:bg-blue-800 text-white press-start-2p-regular py-2 px-4 rounded-lg shadow-md border-2 border-white transition-all duration-200 transform hover:scale-105"
                 >
                   Siguiente Pokémon
                 </button>
