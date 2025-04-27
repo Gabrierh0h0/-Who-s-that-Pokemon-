@@ -62,7 +62,7 @@ const PokemonGame: React.FC = () => {
 
     if (audio) {
       audio.pause();
-      audio.currentTime = 0; // Reinicia el audio al principio
+      audio.currentTime = 0;
     }
 
     if (gameOver && correctPokemon) {
@@ -110,7 +110,7 @@ const PokemonGame: React.FC = () => {
       </div>
       {loading ? (
         <p className="text-yellow-400">Cargando...</p>
-      ) : (
+      ) : ( 
         correctPokemon && (
           <>
             <PokemonDisplay sprite={correctPokemon.sprite} gameOver={gameOver} />
@@ -124,7 +124,7 @@ const PokemonGame: React.FC = () => {
                     <button
                       key={index}
                       onClick={() => handleSelection(name)}
-                      className=" press-start-2p-regular bg-pokemon-yellow hover:bg-red-600 text-black  py-3 px-4 rounded-lg shadow-md border-2 border-white transition-all duration-200 transform hover:scale-105"
+                      className=" press-start-2p-regular bg-pokemon-yellow hover:bg-red-600 cursor-hover text-black  py-3 px-4 rounded-lg shadow-md border-2 border-white transition-all duration-200 transform hover:scale-105"
                     >
                       {name.toUpperCase()}
                     </button>
@@ -132,7 +132,7 @@ const PokemonGame: React.FC = () => {
                 </div>
                 <button
                   onClick={handleNext}
-                  className="bg-gray-600 hover:bg-blue-800 text-white press-start-2p-regular py-2 px-4 rounded-lg shadow-md border-2 border-white transition-all duration-200 transform hover:scale-105"
+                  className="bg-gray-600 bg-pokemon-blue-hover cursor-hover text-white press-start-2p-regular  py-2 px-4 rounded-lg shadow-md border-2 border-white transition-all duration-200 transform hover:scale-105"
                 >
                   Siguiente Pokémon
                 </button>
@@ -146,7 +146,7 @@ const PokemonGame: React.FC = () => {
                 </p>
                 <button
                   onClick={handleNext}
-                  className="mt-2 bg-pokemon-yellow text-white press-start-2p-regular py-2 px-4 rounded-lg shadow-md border-2 border-white transition-all duration-200 transform hover:scale-105"
+                  className="mt-2 bg-pokemon-yellow cursor-hover text-white press-start-2p-regular py-2 px-4 rounded-lg shadow-md border-2 border-white transition-all duration-200 transform hover:scale-105"
                 >
                   Siguiente Pokémon
                 </button>

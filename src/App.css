@@ -13,9 +13,8 @@
 
 
 :root {
-
+  --pokemon-blue: #3558A8;
   --pokemon-yellow: #FFCB05; /* Amarillo clásico de Pokémon */
-
 }
 
 .press-start-2p-regular {
@@ -28,5 +27,16 @@
   background-color: var(--pokemon-yellow);
 }
 
+.bg-pokemon-blue-hover:hover {
+  background-color: var(--pokemon-blue);
+}
 
+*{
+  cursor: url("/Gengar.png") -32 -32, auto ;
+} 
 
+.cursor-hover:hover {
+  cursor: url('/Gengar.png') -32 -32, auto;
+}
+
+ 
